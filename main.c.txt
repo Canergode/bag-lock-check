@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int check_lock(int attempted_password)
+{
+    if(attempted_password == 7355)
+    {
+        return 1;
+    }
+    else 
+    {
+        return 0;
+    }
+}
+
+int main()
+{
+    int password;
+    
+    printf("Enter the bag password: ");
+    scanf("%d",&password);
+    
+    if(check_lock(password) == 1)
+    {
+        printf("Access granted. Bag opening...\n");
+    }
+    else 
+    {
+        printf("Wrong password! System locked.\n");
+    }
+    return 0;
+}
